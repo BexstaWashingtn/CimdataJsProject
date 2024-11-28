@@ -1,0 +1,427 @@
+/* -------------------------------------------- */
+/* CSS VARS */
+
+:root{
+    --display-bg-gradient: linear-gradient(180deg, rgba(71,71,71,1) 0%, rgba(68,68,68,1) 48%, rgba(61,61,61,1) 52%, rgba(47,47,47,1) 100%);
+    --display-inset-shadow: inset 0px 0px 10px rgba(0,0,0,0.75);
+    --color-default:#555;
+    --color-display-default:#888;
+    --color-active:#aaaaaa;
+
+    --knobs-background-gradient-default: linear-gradient(180deg, rgb(224, 224, 224) 0%, rgb(180, 180, 180) 50%, rgb(80, 80, 80) 100%);
+    --knobs-background-gradient-hover:  linear-gradient(180deg, rgba(149,149,149,1) 0%, rgba(111,111,111,1) 50%, rgb(68, 68, 68) 100%);
+    --knobs-background-gradient-selected:  linear-gradient(180deg, rgba(188,246,106,1) 0%, rgba(84,108,49,1) 100%);
+    --knobs-background-gradient-selected-hover:  linear-gradient(180deg, rgb(103, 134, 60) 0%, rgb(37, 48, 22) 100%);
+    --knobs-background-gradient-play:  linear-gradient(180deg, rgba(169,70,70,1) 0%, rgb(71, 24, 24) 100%);
+    --knobs-background-gradient-play-hover:  linear-gradient(180deg, rgb(136, 56, 56) 0%, rgb(49, 15, 15) 100%);
+
+}
+
+/* -------------------------------------------- */
+/* CSS KONFIGURATION */
+
+span,div, input{
+    cursor: default;
+}
+
+button, a{
+    cursor: pointer;
+    border:0;
+    outline:0;
+    text-decoration: none;
+}
+
+div, span, p, h1, button{
+    box-sizing: border-box;
+}
+
+h1{
+    font-size:2.5rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+::-moz-selection { background: transparent; }
+::selection { background: transparent; }
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+/* -------------------------------------------- */
+/* APP BODY */
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#1E1E1E;
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    color: var(--color-default);
+}
+
+#app{
+    /*width: 978px;
+    height: 549px;*/
+    padding:5rem;
+    display:flex;
+    justify-content: center;
+    align-self: center;
+    background: rgb(27,27,27);
+    background: linear-gradient(180deg, rgba(27,27,27,1) 0%, rgba(15,15,15,1) 100%);
+    box-shadow: inset 0 0 2rem rgba(0,0,0, 1);
+
+}
+
+#app > .inner{
+    /*width:743px;
+    height:360px;*/
+    display:flex;
+    align-self: center;
+    flex-direction: column;    
+}
+
+#header{
+    text-align: right;
+    padding:0 20px;
+}
+
+/* -------------------------------------------- */
+/* DISPLAY - USER SELECTION */
+
+#mainDisplay{
+    background: rgb(71,71,71);
+    background: var(--display-bg-gradient);
+    height:116px;
+    width:236px;
+    box-shadow: var(--display-inset-shadow);
+    padding:10px 10px 5px 10px;
+    margin-right:30px;
+}
+
+#mainDisplay hr{
+    border:0;
+    border-top:#555 1px solid;
+    margin: 5px 0;
+}
+
+#userSelection{
+    height:72px;
+    overflow-y: scroll;
+    scrollbar-color: var(--color-display-default) transparent;
+    scrollbar-width: thin;
+}
+
+#userSelection button{
+    display:block;
+    border:0;
+    background-color:transparent;
+    color:var(--color-display-default);
+    width:100%;
+    text-align: left;
+}
+
+#userSelection button:hover{
+    background-color:rgba(0,0,0,0.25);
+}
+
+#userSelection button:focus-visible{
+    background-color:rgba(0,0,0,0.25);
+    border:0;
+    outline:0;  
+}
+
+#userInformation{
+    font-size:0.75rem;
+    color: var(--color-display-default);
+    padding:2px 5px 0;
+}
+
+
+/* -------------------------------------------- */
+/* BPM INPUT */
+
+#bpmDisplay{
+    display:flex;
+    justify-content: flex-end;
+    align-self: center;
+    width:236px;
+}
+
+#bpmDisplay > .inner{
+    margin:2rem 0;
+}
+
+#bpmDisplay .label{
+    font-size:1.25rem;
+    text-transform: uppercase;
+    font-weight:bold;
+    margin-right:5px;
+}
+
+#bpmDisplay #inputBpm{
+    width:48px;
+    height:31px;
+    background: var(--display-bg-gradient);
+    border:0;
+    box-shadow: var(--display-inset-shadow);
+    text-align:center;
+    font-weight:bold;
+    color: var(--color-display-default);
+    font-size: 0.875rem;
+}
+
+#bpmDisplay #inputBpm:focus-visible{
+    border-radius:0;
+    border:0;
+    outline:0;
+}
+
+/* -------------------------------------------- */
+/* CHANNELS */
+
+#controlls,#channels{
+    display:flex;
+    flex-direction: row;
+}
+
+.channel{
+    text-align:center;
+    margin:0 10px;
+
+}
+
+.channel.active .channelNumber{
+    color: var(--color-active);
+}
+
+.channelNumber{
+    font-size:2.25rem;
+    font-weight:bold;
+    color: #333;
+    background:transparent;
+}
+
+.channel .label{
+    font-size:0.75rem;
+}
+
+.channel .rotary.big{
+    height:30px;
+    width:30px;    
+}
+.channel .rotary.small{
+    height:20px;
+    width:20px;    
+}
+
+.channel .rotary{
+    margin:15px auto 5px;
+    position: relative;
+}
+
+.channel .rotary button{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    border-radius:1rem;
+    border:0;
+    box-shadow:0 0 5px rgba(0,0,0,0.75);
+    background: transparent;
+    z-index:1;
+}
+
+.channel .rotary button::after{
+    content:"";
+    height:6px;
+    width:3px;
+    background-color:black;
+    display: block;
+    position: absolute;
+    top:0;
+    left:50%;
+    transform: translateX(-50%);
+    z-index:2;
+}
+
+.channel .rotary .background{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: var(--knobs-background-gradient-default);
+    border-radius:1rem;
+    border:0;
+    box-shadow:0 0 5px rgba(0,0,0,0.75);
+    z-index:0;
+}
+
+#controlls .userNote .note{
+    display: block;
+    font-size:0.75rem;
+    font-weight:bold;
+    padding-top:20px;
+    padding-left:10px;
+}
+
+.rotate90{
+    rotate: 90deg;
+    display: block;
+}
+
+/* -------------------------------------------- */
+/* SEQUENZER */
+
+#sequenzer{
+    display:flex;
+}
+
+#sequenzer #controller{
+    margin-right:20px;
+}
+
+#sequenzer #controller button{
+    position: relative;
+    height:60px;
+    width:60px;
+    border:0;
+    border-radius:0.5rem;
+    background: var(--knobs-background-gradient-default);
+    transition: all 1s ease-out;
+}
+
+#sequenzer #controller button:hover{
+    background: var(--knobs-background-gradient-hover);
+}
+
+#sequenzer #controller button.play::after{
+    content: url("../img/icon_play.svg");
+    display:block;
+    width:30px;
+    height:30px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+#sequenzer #controller button.stop::after{
+    content: url("../img/icon_stop.svg");
+    display:block;
+    width:30px;
+    height:30px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+#sequenzer #steps{
+    display:flex;
+    height:60px;
+    position: relative;
+    z-index:1;
+}
+
+#sequenzer #steps > div.stepsgroup{
+    display:flex;
+    height:60px;
+    padding:0 2px;
+    border-radius:5px;
+    align-items: center;
+    border:3px #313131 solid;
+}
+
+#sequenzer #steps > div.stepsgroup:nth-child(2n){
+    background-color:#1E1E1E;
+}
+
+#sequenzer #steps button{
+    display:block;
+    height:50px;
+    width:33px;
+    border-radius:5px;
+    margin:0 3px;
+    background: var(--knobs-background-gradient-default);
+    font-weight:bold;
+    font-size:1rem;
+    color: transparent;
+}
+
+/*
+#sequenzer #steps.keyPress button{
+    color: rgba(0,0,0,0.0);
+}
+*/
+
+#sequenzer #steps.keyPress #labels{
+    color: var(--color-default);
+}
+
+#sequenzer #steps button:hover{
+    background: var(--knobs-background-gradient-hover);
+}
+
+#sequenzer #steps button.selected{
+    background: var(--knobs-background-gradient-selected);
+}
+
+#sequenzer #steps button.selected:hover{
+    background: var(--knobs-background-gradient-selected-hover);
+}
+
+#sequenzer #steps button.play{
+    background: var(--knobs-background-gradient-play);
+}
+#sequenzer #steps button.play:hover{
+    background: var(--knobs-background-gradient-play-hover);
+}
+
+#labels{
+    display:flex;
+    position:absolute;
+    top:-20px;
+    left:0;
+    right:0;
+    bottom:-20px;
+    z-index: -1;
+    color:#333;
+}
+
+#labels .labelsgroup{
+    display:flex;
+    flex-basis:25%;
+    flex-direction: column;
+    justify-content: space-between;
+
+    font-size:0.75rem;   
+}
+
+#labels .labelsgroup .top{
+    text-align:center;
+    font-weight:bold;
+}
+
+#labels .labelsgroup .bottom{
+    text-align:left;
+    margin: 0 5px;
+}
+
+#labels .labelsgroup .bottom span{
+    display:inline-block;
+    width:30px;
+    margin: 0 3px;
+}
+
+#labels .labelsgroup .userNote{
+    position: absolute;
+    font-weight:bold;
+    top:50%;
+    right:-55px;
+    transform: translateX(-50%);
+    color: var(--color-default);
+}

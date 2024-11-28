@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#000000">
+
+    <script type="module" src="js/app.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    
+    <div id="app">
+
+        <div class="inner">
+
+            <header id="header">
+
+                <h1 id="logo">sDrums</h1>
+
+            </header>
+
+            <main id="main">
+
+                <div id="controlls">
+
+                    <section id="displays">
+                        <div id="mainDisplay">
+
+                            <div id="userSelection">
+                                <button>pattern 01</button>
+                                <button>nu beat</button>
+                                <button>fresh rhythm</button>
+                                <button>sommerset</button>
+                                <button>pattern 02</button>
+                                <button>pattern 03</button>
+                                <button>pattern 04</button>
+                            </div>
+                            <hr>
+                            <div id="userInformation"></div>
+
+                        </div>
+                        <div id="bpmDisplay">
+                            <div class="inner">
+                                <span class="label">BPM</span>
+                                <input type="number" min="60" max="240" value="120" id="inputBpm"> 
+                            </div>
+                        </div>
+
+                    </section>
+                    <section id="channels">
+
+                        <div data-id="1" class="channel active">
+                            <button class="channelNumber">1</button>
+
+                            <div class="rotary big volume">
+                                <button></button>
+                                <div class="background"></div>
+                            </div>
+
+                            <label class="label">Volume</label>
+
+                            <div class="rotary small panel">
+                                <button></button>
+                                <div class="background"></div>
+                            </div>
+
+                            <label class="label">Panel</label>
+
+                        </div>
+                        <div data-id="2" class="channel">
+                            <button class="channelNumber">2</button>
+
+                            <div class="rotary big volume">
+                                <button></button>
+                                <div class="background"></div>
+                            </div>
+
+                            <label class="label">Volume</label>
+
+                            <div class="rotary small panel">
+                                <button></button>
+                                <div class="background"></div>
+                            </div>
+
+                            <label class="label">Panel</label>
+
+                        </div>
+                        <div data-id="3" class="channel">
+                            <button class="channelNumber">3</button>
+
+                            <div class="rotary big volume">
+                                <button></button>
+                                <div class="background"></div>
+                            </div>
+
+                            <label class="label">Volume</label>
+
+                            <div class="rotary small panel">
+                                <button></button>
+                                <div class="background"></div>
+                            </div>
+
+                            <label class="label">Panel</label>
+
+                        </div>
+                        <div data-id="4" class="channel">
+                            <button class="channelNumber">4</button>
+
+                            <div class="rotary big volume">
+                                <button></button>
+                                <div class="background"></div>
+                            </div>
+
+                            <label class="label">Volume</label>
+
+                            <div class="rotary small panel">
+                                <button></button>
+                                <div class="background"></div>
+                            </div>
+
+                            <label class="label">Panel</label>
+
+                        </div>
+                        <div data-id="5" class="channel">
+                            <button class="channelNumber">5</button>
+
+                            <div class="rotary big volume">
+                                <button></button>
+                                <div class="background"></div>
+                            </div>
+
+                            <label class="label">Volume</label>
+
+                            <div class="rotary small panel">
+                                <button></button>
+                                <div class="background"></div>
+                            </div>
+
+                            <label class="label">Panel</label>
+
+                        </div>
+                        <div data-id="6" class="channel">
+                            <button class="channelNumber">6</button>
+
+                            <div class="rotary big volume">
+                                <button></button>
+                                <div class="background"></div>
+                            </div>
+
+                            <label class="label">Volume</label>
+
+                            <div class="rotary small panel">
+                                <button></button>
+                                <div class="background"></div>
+                            </div>
+
+                            <label class="label">Panel</label>
+
+                        </div>
+                        <div data-id="7" class="channel">
+                            <button class="channelNumber">7</button>
+
+                            <div class="rotary big volume">
+                                <button></button>
+                                <div class="background"></div>
+                            </div>
+
+                            <label class="label">Volume</label>
+
+                            <div class="rotary small panel">
+                                <button></button>
+                                <div class="background"></div>
+                            </div>
+
+                            <label class="label">Panel</label>
+
+                        </div>
+                        <div data-id="8" class="channel">
+                            <button class="channelNumber">8</button>
+
+                            <div class="rotary big volume">
+                                <button></button>
+                                <div class="background"></div>
+                            </div>
+
+                            <label class="label">Volume</label>
+
+                            <div class="rotary small panel">
+                                <button></button>
+                                <div class="background"></div>
+                            </div>
+
+                            <label class="label">Panel</label>
+
+                        </div>
+
+                    </section>
+
+                    <div class="userNote">
+                        <span class="note rotate90">Keys</span>
+                    </div>
+
+                </div> 
+                
+                <div id="sequenzer">
+
+                    <div id="controller">
+                        <button class="play"></button>
+                    </div>
+
+                    <div id="steps" class="">
+
+                        <div class="stepsgroup">
+                            <button data-id="1" >1</button>
+                            <button data-id="2" >2</button>
+                            <button data-id="3" >3</button>
+                            <button data-id="4" >4</button>
+                        </div>
+                        <div class="stepsgroup">
+                            <button data-id="5" >5</button>
+                            <button data-id="6" >6</button>
+                            <button data-id="7" >7</button>
+                            <button data-id="8" >8</button>
+                        </div>
+                        <div class="stepsgroup">
+                            <button data-id="9" >9</button>
+                            <button data-id="10" >10</button>
+                            <button data-id="11" >11</button>
+                            <button data-id="12" >12</button>
+                        </div>
+                        <div class="stepsgroup">
+                            <button data-id="13" >13</button>
+                            <button data-id="14" >14</button>
+                            <button data-id="15" >15</button>
+                            <button data-id="16" >16</button>
+                        </div>
+
+                        <div id="labels">
+
+                            <div class="labelsgroup">
+                                <div class="top">
+                                    <span>Sounds</span>
+                                </div>
+                                <div class="bottom">
+                                    <span>Load</span>
+                                </div>
+                            </div>
+                            <div class="labelsgroup"></div>
+                            <div class="labelsgroup"></div>
+                            <div class="labelsgroup">
+                                <div class="top">
+                                    <span>Pattern</span>
+                                </div>
+                                <div class="bottom">
+                                    <span>Reset</span>
+                                    <span>Load</span>
+                                    <span>Save</span>
+                                </div>
+                                <div class="userNote">
+                                    <span class="note rotate90">Shift +</span>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
