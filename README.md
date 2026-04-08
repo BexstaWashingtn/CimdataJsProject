@@ -26,3 +26,5 @@ Der Funktionsumfang bildet den Kern einer Drummachine ab. Einige geplante Featur
 ## Demo
 
 https://sdrums.tomasbee.de
+
+Deployment über Vercel (Continuous Deployment via GitHub).
