@@ -1,19 +1,26 @@
 [
-    {
-        "url" : "sounds/FAT K.wav"
-    },{
-        "url" : "sounds/SD STK.wav"
-    },{
-        "url" : "sounds/SNR 1.wav"
-    },{
-        "url" : "sounds/CL HH.wav"
-    },{
-        "url" : "sounds/CLAV.wav"
-    },{
-        "url" : "sounds/L SHAK.wav"
-    },{
-        "url" : "sounds/MARIMB 1.wav"
-    },{
-        "url" : "sounds/MARIMB 2.wav"
-    }
+  {
+    "url": "./sounds/fat_k.wav"
+  },
+  {
+    "url": "./sounds/sd_stk.wav"
+  },
+  {
+    "url": "./sounds/snr_1.wav"
+  },
+  {
+    "url": "./sounds/cl_hh.wav"
+  },
+  {
+    "url": "./sounds/clav.wav"
+  },
+  {
+    "url": "./sounds/l_shak.wav"
+  },
+  {
+    "url": "./sounds/marimba_1.wav"
+  },
+  {
+    "url": "./sounds/marimba_2.wav"
+  }
 ]
